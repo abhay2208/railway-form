@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f0f0f0;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #333;
+      padding: 1rem;
+      background-color: #4CAF50;
+      margin: 0;
+    }
+
+    form {
+      padding: 1rem;
+      max-width: 400px;
+      margin: 0 auto;
+      background-color: #fff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    label {
+      display: block;
+      font-size: 1.2rem;
+      font-weight: bold;
+      color: #333;
+      margin-top: 1rem;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-top: 0.2rem;
+    }
+
+    input[type="number"] {
+      width: 50%;
+    }
+
+    input[type="submit"] {
+      display: block;
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1.2rem;
+      background-color: #4CAF50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      margin-top: 1rem;
+      cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+      background-color: #3e8e41;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Railway Ticket Reservation Form</h2>
+
+<form action="/submit_reservation" method="post">
+  <label for="name">Name:</label><br>
+  <input type="text" id="name" name="name"><br>
+  <label for="source">Source Station:</label><br>
+  <input type="text" id="source" name="source"><br>
+  <label for="destination">Destination Station:</label><br>
+  <input type="text" id="destination" name="destination"><br>
+  <label for="date">Date of Journey:</label><br>
+  <input type="date" id="date" name="date"><br>
+  <label for="class">Class:</label><br>
+  <select id="class" name="class">
+    <option value="1ac">1AC</option>
+    <option value="2ac">2AC</option>
+    <option value="3ac">3AC</option>
+    <option value="cc">CC</option>
+  </select><br>
+  <label for="quantity">Number of Tickets:</label><br>
+  <input type="number" id="quantity" name="quantity" min="1"><br>
+  <input type="submit" value="Submit">
+</form> 
+
+</body>
+</html>
